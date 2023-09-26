@@ -89,7 +89,9 @@ namespace http_server
             }
             else
             {
-                Console.WriteLine("Not found");
+                Console.WriteLine("Файл не найден");
+
+                response.StatusCode = (int)HttpStatusCode.NotFound;
             }
             response.Close();
         }
